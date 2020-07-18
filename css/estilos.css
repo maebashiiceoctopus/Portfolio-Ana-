@@ -76,8 +76,6 @@ a:focus {
   align-items: center;
   font-family: var(--ff-primary);
   padding: 3em;
-
-
 }
 
 
@@ -139,6 +137,7 @@ a:focus {
 
 .about-me-texto {
   padding-top: 2em;
+  margin-right: 4em;
   order: 1;
   font-family: var(--ff-secondary);
   font-weight: var(--fw-light);
@@ -155,11 +154,41 @@ a:focus {
 
 }
 
+.banner{
+  margin-top: 2.5em;
+  max-width: 1440px;  
+  height: 300px;
+  background-image: url(../img/banner.jpg);
+}
 
 
+.blockquote {
+  padding: 9%;
+  position: relative;
+}
+.blockquote p {
+  font-family: var(--ff-secondary);
+  color:var(--clr-light);
+  font-size: var(--fs-h2);
+  text-align: center;
+}
+
+ .frase p{ 
+   padding-top: 1em;
+  font-family: var(--ff-secondary) ;
+  font-size: var(--fs-h3-p) ;
+}
 
 
-
+.blockquote::after {
+  content: "";
+  top: 20%;
+  left: 50%;
+  margin-left: -100px;
+  position: absolute;
+  border-bottom: 3px solid var(--clr-light);
+  width: 200px;
+}
 
 
 
@@ -331,11 +360,12 @@ a:focus {
 
   .about-me {
     margin: 0 auto;
-    margin-top: 5em;
+    margin-top: 10em;
     padding: 0px;
     display: flex;
     flex-direction: column;
     width: 80%;
+    font-size: var(--fs-h2);
     
   }
 
@@ -359,6 +389,20 @@ a:focus {
     writing-mode: horizontal-tb;
   }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
 }
 
@@ -397,15 +441,10 @@ a:focus {
 
   .desc-heading {
     width: 30%;
-
     margin: 0 auto;
     text-align: center;
-
-
   }
-
-
-
+  
 
 }
 
@@ -414,9 +453,9 @@ a:focus {
 @media screen and (max-width:500px) {
   :root {
     --fs-h1: 2rem;
-    --fs-h2: 0.9em;
-    --fs-h3-p: 1.125rem;
-    --fs-body: 1rem;
+    --fs-h2:  1.125rem;
+    --fs-h3-p: .9rem;
+    --fs-body: .5rem;
   }
 
   .container {
@@ -430,6 +469,32 @@ a:focus {
 
     width: 80%;
   }
+  
+.banner{
+  margin-top: 10em;
+  width: 100%; 
+  height: 250px;
+ 
+}
+
+
+.blockquote {
+  padding: 15%;  
+}
+.blockquote p {
+  
+ padding-top: 2em;
+}
+
+ .frase p{ 
+  
+  font-size: var(--fs-body) ;
+}
+
+
+
+
+
 
 
 }
