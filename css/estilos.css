@@ -4,9 +4,7 @@
 
 
 /*ESTILOS ROOT*/
-*,
-*::before,
-*::after {
+* {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
@@ -26,12 +24,12 @@
   --fw-bold: 900;
 
   --clr-light: #fff;
-  --clr-dark: #231942;
+  --clr-dark: #000000;
   --clr-accent: #208E98;
   --color-links: #d80ed8;
-  --fs-h1: 3rem;
+  --fs-h1: 3.5rem;
   --fs-h2: 2em;
-  --fs-h3-p: 1.125rem;
+  --fs-h3-p: .9rem;
   --fs-body: 1rem;
 
 
@@ -72,49 +70,40 @@ a:focus {
   height: 800px;
 }
 
-.header {
+.contenedor-menu {
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
-
-  padding-top: 1em;
   font-family: var(--ff-primary);
-  padding-right: 3em;
-  padding-left: 3em;
+  padding: 3em;
+
 
 }
 
-.logo-nombre {
+
+.nav {
+  width: 30%;
+  font-size: var(--fs-h2);
+
+}
+
+.nav__list {
+  display: flex;
+  justify-content: space-around;
+
+
+}
+
+.logo {
   width: 20%;
   color: var(--clr-light);
-  padding: 1em;
 
 }
 
-.logo-nombre h2 {
-  font-size: 1.125em;
-}
-
-.menu {
-  width: 40%;
-}
-
-.menu>ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 1em;
-  font-size: 30px;
-}
-
-
-.intro-heading {
+.intro-heading h1 {
   font-family: var(--ff-primary);
   font-size: var(--fs-h1);
-  width: 35%;
+  width: 40%;
   margin-top: 5em;
   margin-left: 3em;
   color: var(--clr-light);
@@ -127,9 +116,183 @@ a:focus {
   font-size: var(--fs-h2);
   font-family: var(--ff-secondary);
   font-weight: var(--fw-reg-mid);
-  margin-left: 4.5em;
+  margin-left: 5.3em;
 
 }
+
+/*about me*/
+
+
+.about-me {
+  padding: 10em;
+  display: flex;
+  flex-direction: row;
+}
+
+.foto-about {
+  order: 2;
+}
+
+.foto-about img {
+  box-shadow: 0px 0px 4px var(--clr-dark);
+}
+
+.about-me-texto {
+  padding-top: 2em;
+  order: 1;
+  font-family: var(--ff-secondary);
+  font-weight: var(--fw-light);
+  width: 50%;
+
+}
+
+
+.titulo {
+  order: 3;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-h1);
+  writing-mode: vertical-lr;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -137,15 +300,136 @@ a:focus {
 /* MEDIA QUERYS*/
 
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
 
 
-  :root {
-    --fs-h1: 2.3rem;
-    --fs-h2: 1.125rem;
-    --fs-p: .9rem;
-    --fs-body: .7rem;
+  .container {
+    background: url('../img/bg-image.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 500px;
+  }
+
+  .nav {
+    width: 50%;
+  }
+
+
+  .intro-heading h1 {
+    font-size: var(--fs-h1);
+    width: 60%;
+    margin: 0 auto;
+  }
+
+
+  .desc-heading {
+    width: 20%;
+    margin: 0 auto;
 
   }
+
+
+  .about-me {
+    margin: 0 auto;
+    margin-top: 5em;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    
+  }
+
+  .foto-about {
+    order: 2;
+    margin: 0 auto;
+    margin-top:1em;
+  }
+
+
+  .about-me-texto {
+    order: 3;
+    width: 100%;
+    text-align: center;
+  }
+
+
+  .titulo {
+    order: 1;
+    margin: 0 auto;
+    writing-mode: horizontal-tb;
+  }
+
+
+}
+
+
+@media screen and (max-width:768px) {
+  :root {
+    --fs-h1: 2.5rem;
+    --fs-h2: 1.7em;
+    --fs-h3-p: 1.125rem;
+    --fs-body: 1rem;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav {
+    align-items: center;
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .logo {
+    display: none;
+
+  }
+
+  .intro-heading h1 {
+    font-size: var(--fs-h1);
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 3em;
+  }
+
+
+  .desc-heading {
+    width: 30%;
+
+    margin: 0 auto;
+    text-align: center;
+
+
+  }
+
+
+
+
+}
+
+
+
+@media screen and (max-width:500px) {
+  :root {
+    --fs-h1: 2rem;
+    --fs-h2: 0.9em;
+    --fs-h3-p: 1.125rem;
+    --fs-body: 1rem;
+  }
+
+  .container {
+    background: url('../img/bg-image.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+  }
+
+  .nav {
+
+    width: 80%;
+  }
+
 
 }
