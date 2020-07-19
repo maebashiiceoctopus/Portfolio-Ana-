@@ -25,8 +25,8 @@
 
   --clr-light: #fff;
   --clr-dark: #000000;
-  --clr-accent: #208E98;
-  --color-links: #d80ed8;
+  --clr-accent: #cc147f;
+  --color-links: #cc147f;
   --fs-h1: 3.5rem;
   --fs-h2: 2em;
   --fs-h3-p: .9rem;
@@ -60,6 +60,7 @@ a:focus {
   background-size: 100% 2px;
   right: 100%;
   transition: 1s;
+ 
 
 }
 
@@ -235,7 +236,6 @@ object-fit: cover;
 }
 
 
-
 footer {
   width: 100%;
   background-color:var(--clr-dark);
@@ -302,7 +302,23 @@ footer a:hover{
 }
 
 
+.container-boton{
+  display: flex;
+  justify-content: center;
+  margin: 5em;
+}
 
+.container-boton a{
+  background:var(--clr-dark);
+  text-align: center;
+  padding:1.5em;
+  font-family: var(--ff-primary);
+}
+.container-boton a:hover{
+  background-color:var(--color-links);
+  box-shadow: 0px 0px 4px var(--clr-dark) ;
+  transition: 1s;
+}
 
 
 /* MEDIA QUERYS*/
